@@ -6,5 +6,5 @@ load test_helper
   run nodenv-help 'env'
   assert_success
   assert_line "Usage: nodenv env"
-  assert_line "Shows PATH and any variables that start with GEM, RAILS, NODENV or RUBY"
+  assert_line "Shows PATH and any variables that start with NPM, NODE or NODENV"
 }

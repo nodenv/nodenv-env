@@ -2,7 +2,6 @@ unset NODENV_VERSION
 unset NODENV_DIR
 
 NODENV_TEST_DIR="${BATS_TMPDIR}/nodenv"
-RAILS_ROOT="${NODENV_TEST_DIR}/railsapp"
 PLUGIN="${NODENV_TEST_DIR}/root/plugins/nodenv-env"
 
 # guard against executing this block twice due to bats internals
