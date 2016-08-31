@@ -1,34 +1,34 @@
-unset RBENV_VERSION
-unset RBENV_DIR
+unset NODENV_VERSION
+unset NODENV_DIR
 
-RBENV_TEST_DIR="${BATS_TMPDIR}/rbenv"
-RAILS_ROOT="${RBENV_TEST_DIR}/railsapp"
-PLUGIN="${RBENV_TEST_DIR}/root/plugins/rbenv-env"
+NODENV_TEST_DIR="${BATS_TMPDIR}/nodenv"
+RAILS_ROOT="${NODENV_TEST_DIR}/railsapp"
+PLUGIN="${NODENV_TEST_DIR}/root/plugins/nodenv-env"
 
 # guard against executing this block twice due to bats internals
-if [ "$RBENV_ROOT" != "${RBENV_TEST_DIR}/root" ]; then
-  export RBENV_ROOT="${RBENV_TEST_DIR}/root"
-  export HOME="${RBENV_TEST_DIR}/home"
+if [ "$NODENV_ROOT" != "${NODENV_TEST_DIR}/root" ]; then
+  export NODENV_ROOT="${NODENV_TEST_DIR}/root"
+  export HOME="${NODENV_TEST_DIR}/home"
   local parent
 
   PATH=/usr/bin:/bin:/usr/sbin:/sbin
-  PATH="${RBENV_TEST_DIR}/bin:$PATH"
+  PATH="${NODENV_TEST_DIR}/bin:$PATH"
   PATH="${BATS_TEST_DIRNAME}/../bin:$PATH"
-  PATH="${BATS_TEST_DIRNAME}/../rbenv/libexec:$PATH"
-  PATH="${BATS_TEST_DIRNAME}/../rbenv/test/libexec:$PATH"
-  PATH="${RBENV_ROOT}/shims:$PATH"
+  PATH="${BATS_TEST_DIRNAME}/../nodenv/libexec:$PATH"
+  PATH="${BATS_TEST_DIRNAME}/../nodenv/test/libexec:$PATH"
+  PATH="${NODENV_ROOT}/shims:$PATH"
   export PATH
 fi
 
 teardown() {
-  rm -rf "$RBENV_TEST_DIR"
+  rm -rf "$NODENV_TEST_DIR"
 }
 
 flunk() {
   { if [ "$#" -eq 0 ]; then cat -
     else echo "$@"
     fi
-  } | sed "s:${RBENV_TEST_DIR}:TEST_DIR:g" >&2
+  } | sed "s:${NODENV_TEST_DIR}:TEST_DIR:g" >&2
   return 1
 }
 

@@ -3,9 +3,8 @@
 load test_helper
 
 @test "help for env is available" {
-  run rbenv-help 'env'
+  run nodenv-help 'env'
   assert_success
-  assert_line "Usage: rbenv env"
-  assert_line "Shows PATH and any variables that start with GEM, RAILS, RBENV or RUBY"
+  assert_line "Usage: nodenv env"
+  assert_line "Shows PATH and any variables that start with GEM, RAILS, NODENV or RUBY"
 }
-
