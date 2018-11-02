@@ -25,4 +25,4 @@ if [ "$NODENV_VERSION" != "system" ]; then
   export PATH="${NODENV_BIN_PATH}:${PATH}"
 fi
 
-/usr/bin/env | grep -E '^PATH=|^NODE_|^NODENV_|^NPM_'
+/usr/bin/env | grep -E '^PATH=|^NODE_|^NODENV_|^[nN][pP][mM]_'

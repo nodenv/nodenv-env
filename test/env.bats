@@ -30,3 +30,23 @@ load test_helper
 
   assert_line "PATH=$PATH"
 }
+
+@test "is case insensitive for npm_" {
+  export NPM_UPPER=bar
+  export npm_lower=bar
+  export NpM_mIx=bar
+
+  export node_foo=bar
+
+  run nodenv-env
+
+  echo $output
+
+  assert_success
+
+  refute_line "node_foo=bar"
+
+  assert_line "NPM_UPPER=bar"
+  assert_line "npm_lower=bar"
+  assert_line "NpM_mIx=bar"
+}
