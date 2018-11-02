@@ -23,6 +23,8 @@
   "scripts": {
     "pretest": "[ -d nodenv ] || git clone --depth=1 https://github.com/nodenv/nodenv",
     "test": "bats ${CI:+--tap} test",
+    "posttest": "npm run lint",
+    "lint": "shellcheck $(git ls-files | grep -E -e '^bin/' -e '\\.sh$' -e '\\.bash$')",
     "publish:brew": "brew-publish $npm_package_name v$npm_package_version",
     "postversion": "git push --follow-tags && npm run publish:brew"
   },
