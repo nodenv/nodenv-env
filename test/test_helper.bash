@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 load ../node_modules/bats-assert/all
 
 unset NODENV_VERSION
