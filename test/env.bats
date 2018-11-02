@@ -2,22 +2,51 @@
 
 load test_helper
 
-@test "running rbenv-env lists only interesting environment variables" {
-  export FRED=john
-  export RUBY123=456
-  export RAILS56=78
-  export GEMSTONES=precious
-  export RBENV_ABC=tv.station
+@test "running nodenv-env lists only interesting environment variables" {
+  export FOO=bar
+  export NPMFOO=bar
+  export NPM_FOO=bar
+  export NODEFOO=bar
+  export NODE_FOO=bar
+  export NODENVFOO=bar
+  export NODENV_FOO=bar
 
-  run rbenv-env
+  run nodenv-env
+
+  echo $output
+
   assert_success
-  refute_line "FRED=john"
-  assert_line "GEMSTONES=precious"
-  assert_line "RBENV_ABC=tv.station"
-  assert_line "RBENV_VERSION=system"
-  assert_line "RBENV_ROOT=$RBENV_ROOT"
-  assert_line "RUBY123=456"
-  assert_line "RAILS56=78"
-  assert_line "PATH=$PATH"
 
+  refute_line "FRED=john"
+
+  refute_line "NPMFOO=bar"
+  assert_line "NPM_FOO=bar"
+
+  refute_line "NODEFOO=bar"
+  assert_line "NODE_FOO=bar"
+
+  refute_line "NODENVFOO=bar"
+  assert_line "NODENV_FOO=bar"
+
+  assert_line "PATH=$PATH"
+}
+
+@test "is case insensitive for npm_" {
+  export NPM_UPPER=bar
+  export npm_lower=bar
+  export NpM_mIx=bar
+
+  export node_foo=bar
+
+  run nodenv-env
+
+  echo $output
+
+  assert_success
+
+  refute_line "node_foo=bar"
+
+  assert_line "NPM_UPPER=bar"
+  assert_line "npm_lower=bar"
+  assert_line "NpM_mIx=bar"
 }

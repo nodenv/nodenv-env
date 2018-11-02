@@ -1,7 +1,2 @@
-# Ignore bats and rbenv used for testing
-/rbenv
-/bats
-/tmp
-
-# See: https://gist.github.com/ianheggie/9327010
-# for Global git ignore for OS/IDE/temp/backup files
+/node_modules
+/nodenv

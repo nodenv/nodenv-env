@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# Summary: Shows relevant environment variables.
+#
+# Usage: nodenv env
+#
+# Shows PATH and any variables that start with NPM, NODE or NODENV
+#
+
+set -e
+[ -n "$NODENV_DEBUG" ] && set -x
+
+NODENV_VERSION="$(nodenv-version-name)"
+export NODENV_VERSION
+
+for script in $(nodenv-hooks exec); do
+  # shellcheck disable=SC1090
+  source "$script"
+done
+
+if [ "$NODENV_VERSION" != "system" ]; then
+  NODENV_COMMAND_PATH="$(nodenv-which node)"
+  NODENV_BIN_PATH="${NODENV_COMMAND_PATH%/*}"
+
+  export PATH="${NODENV_BIN_PATH}:${PATH}"
+fi
+
+/usr/bin/env | grep -E '^PATH=|^NODE_|^NODENV_|^[nN][pP][mM]_'

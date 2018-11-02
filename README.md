@@ -1,45 +1,26 @@
-RBENV-ENV
-=========
+# nodenv-env
 
-This [rbenv](http://rbenv.org/) plugin adds the `rbenv env` command that shows relevant environment variables.
+[![Build Status](https://travis-ci.org/nodenv/nodenv-env.svg?branch=master)](https://travis-ci.org/nodenv/nodenv-env)
 
-[![Build Status of master](https://api.travis-ci.org/ianheggie/rbenv-env.svg?branch=master)](https://travis-ci.org/ianheggie/rbenv-env)
+[nodenv][] plugin to view environment variables pertaining to nodejs
+
+## Installation
+
+To install nodenv-env, clone this repository into your ~/.nodenv/plugins directory.
+
+    $ git clone https://github.com/nodenv/nodenv-env.git "$(nodenv root)/plugins/nodenv-env"
 
 ## Usage
 
 Run the command
 
-    $ rbenv env
+    $ nodenv env
 
-To see what environment variables rbenv / plugins pass to commands (Shows PATH and any variables that start with GEM, RAILS, RBENV or RUBY).
-Also shows environment variables that start with NODE_, NODENV_ or NPM for use with rbenv based node.js switching
+## Credits
 
-## Installation
+Forked from [ianheggie][]'s [rbenv-env][] by [Jason Karns][jasonkarns] and modified for nodenv.
 
-To install rbenv-env, clone this repository into your ~/.rbenv/plugins directory. (You'll need a recent version of rbenv that supports plugin bundles.)
-
-    $ git clone https://github.com/ianheggie/rbenv-env.git "$(rbenv root)/plugins/rbenv-env"
-
-## Tests
-
-* [Travis-CI](https://travis-ci.org/ianheggie/rbenv-env) for the Continuous integration test results
-
-## License
-
-Copyright (c) 2013 Ian Heggie - Released under the same terms as [rbenv's MIT-License](https://github.com/sstephenson/rbenv#license)
-
-## Note on Patches/Pull Requests
-
-*Since I no longer using rbenv, I am happy to include pull requests, but I am not actively developing this plugin. If you are interested in taking on this project, either completely or in partnership, please contact me.*
-
-* Fork the project.
-* Make your feature addition or bug fix, **with tests**
-* Commit
-* Send me a pull request. Bonus points for topic branches.
-
-## Contributors
-
-Thanks go to:
-
-* Various people who have given feedback and suggestions via the issues list and pull requests
-
+[nodenv]: https://github.com/nodenv/nodenv
+[ianheggie]: https://github.com/ianheggie
+[rbenv-env]: https://github.com/ianheggie/rbenv-env
+[jasonkarns]: https://github.com/jasonkarns
