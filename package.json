@@ -2,11 +2,16 @@
   "name": "nodenv-env",
   "version": "0.0.0",
   "private": true,
+  "description": "View environment variables pertaining to nodejs",
   "homepage": "https://github.com/nodenv/nodenv-env#readme",
   "license": "MIT",
+  "author": "Ian Heggie <ian@heggie.biz> (http://www.heggie.biz)",
+  "contributors": [
+    "Jason Karns <jason@karns.name> (http://jason.karns.name)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodenv/nodenv-env.git"
+    "url": "https://github.com/nodenv/nodenv-env.git"
   },
   "bugs": {
     "url": "https://github.com/nodenv/nodenv-env/issues"
