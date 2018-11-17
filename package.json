@@ -4,8 +4,8 @@
   "description": "View environment variables pertaining to nodejs",
   "homepage": "https://github.com/nodenv/nodenv-env#readme",
   "license": "MIT",
-  "author": "Ian Heggie <ian@heggie.biz> (http://www.heggie.biz)",
   "contributors": [
+    "Ian Heggie <ian@heggie.biz> (http://www.heggie.biz)",
     "Jason Karns <jason@karns.name> (http://jason.karns.name)"
   ],
   "repository": {
