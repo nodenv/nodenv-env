@@ -19,6 +19,9 @@
     "bin": "bin",
     "test": "test"
   },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "test": "bats ${CI:+--tap} test",
     "posttest": "npm run lint",
