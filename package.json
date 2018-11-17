@@ -1,6 +1,6 @@
 {
   "name": "@nodenv/nodenv-env",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "View environment variables pertaining to nodejs",
   "homepage": "https://github.com/nodenv/nodenv-env#readme",
   "license": "MIT",
