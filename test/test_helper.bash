@@ -12,6 +12,7 @@ if [ "$NODENV_ROOT" != "${BATS_TMPDIR}/root" ]; then
 
   PATH="$(npm bin):/usr/bin:/bin:/usr/sbin:/sbin"
   PATH="${BATS_TEST_DIRNAME}/../bin:$PATH"
-  PATH="${NODENV_ROOT}/shims:$PATH"
   export PATH
+
+  eval "$(nodenv init -)"
 fi
