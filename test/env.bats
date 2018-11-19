@@ -2,7 +2,7 @@
 
 load test_helper
 
-@test "running nodenv-env lists only interesting environment variables" {
+@test "nodenv-env lists only interesting environment variables" {
   export FOO=bar
   export NPMFOO=bar
   export NPM_FOO=bar
@@ -11,7 +11,7 @@ load test_helper
   export NODENVFOO=bar
   export NODENV_FOO=bar
 
-  run nodenv-env
+  run nodenv env
 
   echo $output
 
@@ -38,7 +38,7 @@ load test_helper
 
   export node_foo=bar
 
-  run nodenv-env
+  run nodenv env
 
   echo $output
 
