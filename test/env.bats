@@ -28,7 +28,7 @@ load test_helper
   refute_line "NODENVFOO=bar"
   assert_line "NODENV_FOO=bar"
 
-  assert_line "PATH=$PATH"
+  assert_line "PATH=$NODENV_LIBEXEC:$PATH"
 }
 
 @test "is case insensitive for npm_" {
