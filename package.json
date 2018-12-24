@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@nodenv/nodenv": "^1.1.2",
-    "bats": "^0.4.2",
+    "bats": "^1.1.0",
     "bats-assert": "jasonkarns/bats-assert-1",
     "bats-support": "jasonkarns/bats-support",
     "brew-publish": "^2.3.1"
