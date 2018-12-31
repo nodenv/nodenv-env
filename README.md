@@ -16,6 +16,12 @@ Run the command
 
     $ nodenv env
 
+### Usage without installation
+
+nodenv-env can be invoked directly via `npx` without installing it locally.
+
+    $ npx -q @nodenv/nodenv-env
+
 ## Credits
 
 Forked from [ianheggie][]'s [rbenv-env][] by [Jason Karns][jasonkarns] and modified for nodenv.
