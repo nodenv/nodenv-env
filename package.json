@@ -23,6 +23,7 @@
     "bin"
   ],
   "scripts": {
+    "start": "bin/nodenv-env",
     "test": "bats ${CI:+--tap} test",
     "posttest": "npm run lint",
     "lint": "git ls-files bin test/*.bash | xargs shellcheck",
