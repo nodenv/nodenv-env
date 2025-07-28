@@ -33,7 +33,7 @@
     "publish:github": "git push --follow-tags"
   },
   "devDependencies": {
-    "@nodenv/nodenv": "^1.5.0",
+    "@nodenv/nodenv": "^1.6.1",
     "bats": "^1.12.0",
     "bats-assert": "jasonkarns/bats-assert-1",
     "bats-support": "jasonkarns/bats-support",
