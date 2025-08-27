@@ -13,7 +13,7 @@ load test_helper
 
   run nodenv env
 
-  echo $output
+  echo "$output"
 
   assert_success
 
@@ -40,7 +40,7 @@ load test_helper
 
   run nodenv env
 
-  echo $output
+  echo "$output"
 
   assert_success
 
