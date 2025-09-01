@@ -1,12 +1,12 @@
 {
   "name": "@nodenv/nodenv-env",
   "version": "1.0.0",
-  "description": "View environment variables pertaining to nodejs",
+  "description": "A nodenv plugin to view environment variables pertaining to Node.js.",
   "homepage": "https://github.com/nodenv/nodenv-env#readme",
   "license": "MIT",
   "contributors": [
     "Ian Heggie <ian@heggie.biz> (http://www.heggie.biz)",
-    "Jason Karns <jason@karns.name> (http://jason.karns.name)"
+    "Jason Karns <jason.karns@gmail.com> (http://jasonkarns.com)"
   ],
   "repository": {
     "type": "git",

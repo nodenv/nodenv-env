@@ -1,6 +1,6 @@
 # nodenv-env
 
-[nodenv][] plugin to view environment variables pertaining to Node.js
+A [nodenv][] plugin to view environment variables pertaining to Node.js.
 
 [![Tests](https://img.shields.io/github/actions/workflow/status/nodenv/nodenv-env/test.yml?label=tests&logo=github)](https://github.com/nodenv/nodenv-env/actions/workflows/test.yml)
 [![Latest GitHub Release](https://img.shields.io/github/v/release/nodenv/nodenv-env?label=github&logo=github&sort=semver)](https://github.com/nodenv/nodenv-env/releases/latest)
