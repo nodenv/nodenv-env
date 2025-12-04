@@ -33,7 +33,6 @@
     "@nodenv/nodenv": "1",
     "bats": "1",
     "bats-assert": "2",
-    "bats-support": "^0.3.0",
-    "brew-publish": "2"
+    "bats-support": "^0.3.0"
   }
 }
